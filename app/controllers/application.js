@@ -126,7 +126,6 @@ export default Controller.extend({
 
     actions: {
         onFontSelected(font) {
-            debugger
             this.set('font', font)
         }
     },
