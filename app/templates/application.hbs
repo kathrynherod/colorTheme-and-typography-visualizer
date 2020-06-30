@@ -1,5 +1,61 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="application {{font.class}}">
+    {{nav-bar
+        brandName=brandName
+        colorScheme=colorScheme
+        icon=icon
+        font=font
+        fontList=fontList
+        onFontSelected=(action "onFontSelected")
+        theme=theme
+    }}
 
-{{outlet}}
+    {{outlet}}
+
+    <section class="content-blurb">
+        <img src="assets/images/circuit-board.jpg">
+        <div class="text-content">
+            <h2>Our product is amazing</h2>
+            <p>
+                Our functionality is unmatched in the industry, but our impactful technologies and user-proof use is frequently considered a remarkable achievement.
+            </p>
+            <p>
+                Team workgroups close the loop on the issue of a task-oriented culture change, so the customer teamwork makes it happen. A major stretch goal for this fiscal quarter is a time frame. We are convinced that guiding principles interface with the standard guesstimates.
+            </p>
+        </div>
+
+    </section>
+
+    <section class="call-to-action">
+        <div class="features">
+            <div class="feature">
+                <i class="fa fa-area-chart" aria-hidden="true"></i>
+                <div class="feature-info">
+                    <h5>Awesome Feature 1</h5>
+                    <p>Feature details and then some</p>
+                </div>
+            </div>
+            <div class="feature">
+                <i class="fa fa-bullseye" aria-hidden="true"></i>
+                <div class="feature-info">
+                    <h5>Awesome Feature 2</h5>
+                    <p>Feature details  and then some</p>
+                </div>
+            </div>
+            <div class="feature">
+                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                <div class="feature-info">
+                    <h5>Awesome Feature 3</h5>
+                    <p>Feature details and then some</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="button">Order Now</button>
+    </section>
+    <footer>
+        <h5>{{brandName}}</h5>
+        <h5>City, State Zip</h5>
+        <h5>123-456-7890</h5>
+    </footer>
+</div>
+
